@@ -1,0 +1,86 @@
+<!DOCTYPE html> <!-- 宣告 HTML5 文件類型 -->
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8"> <!-- 設定 UTF-8 編碼 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- 響應式視窗設定 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="work4.css"> <!-- 載入共用 CSS 樣式表 -->
+    <title>Donut Worry! 吃・甜甜圈｜聯絡我們</title>
+</head>
+<body>
+    <!-- 頁首導覽列區塊 -->
+    <header class="page-header">
+        <!-- 左側雙 Logo 圖片群組 -->
+        <div class="logo-group">
+            <h1><img class="logo1" src="images (3).jpg" alt="Donut Worry 圓形 Logo"></h1>
+            <h1><img class="logo1" src="logo.jpg" alt="Donut 橫幅 Logo"></h1>
+        </div>
+        <!-- 右側主選單導覽列 -->
+        <nav>
+            <ul class="guided-tour">
+                <li><a href="work4.html">home</a></li>    <!-- 連結至首頁 -->
+                <li><a href="news.html">news</a></li>     <!-- 連結至最新消息 -->
+                <li><a href="Menu.html">Menu</a></li>     <!-- 連結至甜點菜單 -->
+                <li><a href="Contact.html">Contact</a></li> <!-- 連結至聯絡我們 -->
+            </ul>
+        </nav>
+    </header>
+
+    <!-- 聯絡我們主內容區（雙欄：左側聯絡表單 + 右側門市營業資訊） -->
+    <div class="d2 d22">
+        <!-- 左側線上留言與預訂表單區 -->
+        <article>
+            <div class="d6">
+                <h2 class="d3">聯絡我們 & 禮盒預訂</h2>
+                <p class="d5">歡迎填寫下方表單預留當日甜甜圈或洽詢企業外燴合作</p>
+            </div>
+
+            <!-- 聯絡表單開始 -->
+            <form class="contact-form">
+                <div class="form-group">
+                    <label for="name">您的姓名：</label>
+                    <input type="text" id="name" placeholder="請輸入您的稱呼（如：王小明）" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">聯絡電話：</label>
+                    <input type="tel" id="phone" placeholder="請輸入手機號碼（如：0912-345-678）" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">電子信箱：</label>
+                    <input type="email" id="email" placeholder="請輸入 Email 信箱">
+                </div>
+
+                <div class="form-group">
+                    <label for="message">預訂口味或留言內容：</label>
+                    <textarea id="message" rows="5" placeholder="請輸入想預訂的口味、數量與預計取餐時間..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-btn">送出預訂訊息</button>
+            </form>
+        </article>
+
+        <!-- 右側門市地址與營業資訊邊欄 -->
+        <aside>
+            <h3 class="aside-title">門市營業資訊</h3>
+            <ul class="aside-list">
+                <li>店名：Donut Worry! 吃・甜甜圈</li>
+                <li>電話：(02) 2345-6789</li>
+                <li>地址：台北市大安區甜點大道 88 號</li>
+                <li>時間：週二至週日 11:00 - 20:00</li>
+                <li>公休：每週一固定公休</li>
+            </ul>
+        </aside>
+    </div>
+
+    <!-- 頁尾版權宣告區 -->
+    <footer>
+        <div class="footer">
+            <p>&copy;2026 版權所有 monica</p>
+        </div>
+    </footer>
+</body>
+</html>

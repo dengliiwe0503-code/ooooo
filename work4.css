@@ -1,0 +1,279 @@
+/* ================= 1. 頁首導覽列區塊 ================= */
+
+/* 控制單張 Logo 圖片本身的尺寸 */
+.logo1 {
+    width: auto;                   /* 寬度自動計算，保持圖片原始比例不變形 */
+    height: 125px;                 /* 設定圖片固定高度為 125 像素 */
+}
+
+/* 控制包住兩張 Logo 圖片的容器排版 */
+.logo-group {
+    display: flex;                 /* 開啟彈性盒子排版，讓內部兩張圖片水平並排 */
+    align-items: center;           /* 兩張圖片上下垂直置中 */
+    gap: 10px;                     /* 兩張圖片之間的固定間距 */
+    justify-content: space-evenly; /* 讓容器內的圖片在水平方向平均分配空間 */
+}
+
+/* 控制整個頁首區塊（包含 Logo 組與導覽選單）的排版 */
+.page-header {
+    display: flex;                 /* 開啟彈性盒子排版，讓 Logo 組與選單水平並排 */
+    align-items: center;           /* 讓 Logo 組與選單上下垂直置中 */
+    justify-content: space-between;/* 讓 Logo 組靠左、導覽選單靠右對齊 */
+    width: 90%;                    /* 設定頁首寬度佔畫面的 90% */
+    margin: 0 auto;                /* 上下外距 0、左右自動計算，讓 90% 寬度的頁首在畫面水平置中 */
+    height: 125px;                 /* 設定頁首區塊高度為 125 像素 */
+}
+
+/* 控制導覽列清單 <ul> 的整體排列與文字大小 */
+.guided-tour {
+    display: flex;                 /* 開啟彈性盒子排版，讓選單項目 <li> 水平並排 */
+    font-size: 1.75rem;            /* 設定文字大小為 1.75 倍預設字級（約 28px） */
+    text-transform: uppercase;     /* 將英文字母全部自動轉為大寫 */
+    list-style: none;              /* 移除清單預設的黑圓點符號 */
+    padding: 0;                    /* 清除清單預設的左側內距 */
+    margin: 0;                     /* 清除清單預設的上下外距 */
+}
+
+/* 控制導覽列中每一個選單項目 <li> 的間距 */
+.guided-tour li {
+    margin-left: 30px;             /* 每個選單項目左側留 30 像素的外距（拉開選單間距） */
+}
+
+/* 控制導覽列超連結 <a> 的文字外觀與字型 */
+.guided-tour a {
+    text-decoration: none;         /* 移除超連結預設的底線 */
+    color: #ad2d2d;                /* 設定文字顏色為深紅色 */
+    font-family: "Oswald", sans-serif; /* 設定字體為 Oswald，若無則套用預設無襯線字體 */
+    font-optical-sizing: auto;     /* 依文字大小自動最佳化字體光學視覺比例 */
+    font-weight: bold;             /* 設定字體為粗體 */
+    font-style: normal;            /* 設定字體樣式為正常（非斜體） */
+    transition: color 0.3s ease;   /* 滑鼠移過去變色時加上 0.3 秒平滑過渡動畫 */
+}
+
+/* 控制滑鼠游標移到導覽列超連結上方時的互動效果 */
+.guided-tour a:hover {
+    color: #2b00ff;                /* 滑鼠移過去時，文字顏色變為藍紫色（#2b00ff） */
+}
+
+/* ================= 2. 首頁與最新消息（雙欄版面） ================= */
+
+/* 控制首頁橫幅大圖（Banner）的尺寸 */
+.photo1 {
+    width: 100%;                   /* 寬度佔滿父層容器的 100% */
+    height: auto;                  /* 高度自動依比例縮放，防止大圖變形 */
+    display: block;                /* 轉為區塊元素，消除圖片底部的微小白邊 */
+}
+
+/* 外層容器：置中並保持左右兩欄間距 */
+.d2 {
+    max-width: 1100px;             /* 設定最大寬度為 1100 像素，避免小螢幕出現橫向捲軸 */
+    margin: 40px auto;             /* 上下外距留白 40 像素、左右 auto 自動水平置中 */
+    padding: 0 20px;               /* 上下內距 0、左右內距留白 20 像素 */
+    box-sizing: border-box;        /* 將 padding 與 border 計入寬度內，避免撐破版面 */
+}
+
+/* 控制主內容區（文章與側邊欄）的並排方式 */
+.d22 {
+    display: flex;                 /* 開啟彈性盒子排版，讓左側 article 與右側 aside 水平並排 */
+    justify-content: space-between;/* 讓左右兩欄分別靠向最左與最右兩端對齊 */
+    align-items: flex-start;       /* 讓左右兩欄從頂部邊緣對齊 */
+}
+
+/* 左側文章區塊（佔 65% 寬度） */
+article {
+    width: 65%;                    /* 設定左側文章區塊寬度佔外層容器的 65% */
+}
+
+/* 最新消息頁每則文章卡片的底部間距 */
+.news-card {
+    margin-bottom: 45px;           /* 每則新聞下方留 45 像素間距 */
+    padding-bottom: 30px;          /* 底部內距留白 30 像素 */
+    border-bottom: 1px solid #eee; /* 在每則新聞下方加上淺灰色分隔線 */
+}
+
+/* 控制文章標題與類別的群組區塊 */
+.d6 {
+    margin-bottom: 24px;           /* 與下方內容保持 24 像素的底部外距 */
+    border-left: 5px solid #ad2d2d;/* 在標題區塊左側加上一條 5 像素寬的深紅色實線裝飾 */
+    padding-left: 15px;            /* 設定左側內距 15 像素（拉開標題文字與紅線的距離） */
+}
+
+/* 控制文章主標題（<h2>）的文字樣式 */
+.d3 {
+    font-size: 1.8rem;             /* 設定標題字體大小為 1.8 倍預設字級 */
+    margin: 0 0 6px 0;             /* 上、右、左外距為 0，僅下方留 6 像素外距 */
+    color: #333;                   /* 設定標題文字顏色為深灰黑色 */
+}
+
+/* 控制文章副標題/分類的文字樣式 */
+.d5 {
+    margin: 0;                     /* 清除段落預設的上下外距 */
+    color: #777;                   /* 類別文字改用柔和的中灰色 */
+    font-size: 0.95rem;            /* 設定字體大小為 0.95 倍預設字級 */
+}
+
+/* 文章主圖：撐滿文章寬度、加圓角與控制高度 */
+.article-img {
+    width: 100%;                   /* 圖片寬度撐滿整個左側 article 區塊 */
+    height: 360px;                 /* 設定圖片固定高度為 360 像素 */
+    object-fit: cover;             /* 保持圖片原始比例填滿容器並裁切多餘邊緣，防止變形 */
+    border-radius: 12px;           /* 設定圖片四個角為 12 像素的圓角 */
+    margin-bottom: 20px;           /* 圖片下方留 20 像素外距 */
+}
+
+/* 文章內文段落：拉開行距讓閱讀更舒適 */
+.article-text {
+    font-size: 1.05rem;            /* 設定內文字體大小為 1.05 倍預設字級 */
+    line-height: 1.8;              /* 設定行高為 1.8 倍，讓多行文字不擁擠 */
+    color: #444;                   /* 設定內文顏色為深灰色 */
+    text-align: justify;           /* 設定文字左右兩端對齊 */
+}
+
+/* 右側邊欄區塊（佔 30% 寬度，加上淺色背景卡片感） */
+aside {
+    width: 30%;                    /* 設定右側邊欄寬度佔外層容器的 30% */
+    background-color: #fdfaf7;     /* 設定溫暖的米白色背景 */
+    padding: 24px;                 /* 四周內部留白 24 像素 */
+    border-radius: 12px;           /* 設定卡片四個角為 12 像素的圓角 */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.12); /* 加上立體陰影效果 */
+    box-sizing: border-box;        /* 確保內距包含在 30% 寬度內 */
+}
+
+/* 控制側邊欄標題（<h3>）的樣式 */
+.aside-title {
+    font-size: 1.25rem;            /* 設定標題字體大小為 1.25 倍預設字級 */
+    color: #ad2d2d;                /* 設定標題文字顏色為深紅色 */
+    margin-top: 0;                 /* 清除標題上方預設外距 */
+    padding-bottom: 10px;          /* 文字與下方底線之間留 10 像素距離 */
+    border-bottom: 2px solid #ad2d2d; /* 在標題下方加上 2 像素寬的深紅色實線底線 */
+}
+
+/* 控制側邊欄清單 <ul> 的外框設定 */
+.aside-list {
+    list-style: none;              /* 移除清單預設的黑圓點符號 */
+    padding: 0;                    /* 清除清單預設的左側內距 */
+    margin: 0 0 24px 0;            /* 下方留 24 像素外距，與下一組資訊隔開 */
+}
+
+/* 控制側邊欄清單中每一個項目 <li> 的樣式 */
+.aside-list li {
+    padding: 12px 0;               /* 每個項目上下留 12 像素內距 */
+    border-bottom: 1px dashed #ddd;/* 在每個項目下方加上 1 像素寬的淺灰色虛線 */
+    color: #444;                   /* 設定清單文字顏色為深灰色 */
+}
+
+/* 側邊欄圖片：保持比例不變形 */
+.logo2 {
+    width: 100%;                   /* 圖片寬度撐滿側邊欄內部寬度 */
+    height: 160px;                 /* 設定圖片固定高度為 160 像素 */
+    object-fit: cover;             /* 保持圖片比例裁切填滿，不變形 */
+    border-radius: 8px;            /* 設定圖片四個角為 8 像素的圓角 */
+}
+
+/* ================= 3. Menu.html（菜單商品卡片區） ================= */
+
+/* 菜單卡片網格的外層容器 */
+.Ki.wp {
+    max-width: 1100px;             /* 限制最大寬度為 1100 像素，與首頁內容對齊 */
+    margin: 20px auto 60px auto;   /* 上方外距 20px、下方 60px、左右 auto 水平置中 */
+    padding: 0 20px;               /* 左右留白 20 像素 */
+    display: flex;                 /* 開啟彈性盒子排版，讓甜甜圈卡片並排 */
+    justify-content: space-between;/* 卡片左右兩端對齊分配空間 */
+    flex-wrap: wrap;               /* 當一行放滿時自動換到下一行 */
+    gap: 30px;                     /* 卡片與卡片之間的上下左右間距為 30 像素 */
+    box-sizing: border-box;        /* 將內距計入總寬度 */
+}
+
+/* 單張甜甜圈商品卡片（一行排兩張） */
+.pq {
+    width: calc(50% - 15px);       /* 每張卡片佔一半寬度（扣除中間 gap 的一半） */
+    background-color: #fff;        /* 卡片背景設為純白色 */
+    border: 1px solid #eee;        /* 加上 1 像素淺灰色外框線 */
+    border-radius: 12px;           /* 設定卡片四個角為 12 像素圓角 */
+    padding: 20px;                 /* 卡片內部四周留白 20 像素 */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.06); /* 加上柔和的卡片陰影 */
+    box-sizing: border-box;        /* 將 padding 計入卡片寬度內 */
+}
+
+/* 商品卡片內的圖片樣式 */
+.pq img {
+    width: 100%;                   /* 圖片寬度撐滿整張卡片 */
+    height: 240px;                 /* 統一所有商品圖片高度為 240 像素 */
+    object-fit: cover;             /* 保持比例填滿不變形 */
+    border-radius: 8px;            /* 圖片加上 8 像素圓角 */
+}
+
+/* 商品名稱標題（.cake） */
+.cake {
+    font-size: 1.4rem;             /* 設定商品名稱文字大小 */
+    color: #333;                   /* 設定文字顏色為深灰黑色 */
+    margin: 15px 0 8px 0;          /* 上方外距 15px、下方 8px */
+}
+
+/* 商品口感介紹文字 */
+.menu-desc {
+    color: #666;                   /* 設定介紹文字為中灰色 */
+    line-height: 1.6;              /* 設定 1.6 倍行高 */
+    margin: 0 0 12px 0;            /* 下方留 12 像素外距 */
+}
+
+/* 商品價格文字 */
+.menu-price {
+    font-size: 1.25rem;            /* 放大價格文字 */
+    font-weight: bold;             /* 設定價格為粗體 */
+    color: #ad2d2d;                /* 設定價格為醒目的深紅色 */
+    margin: 0;                     /* 清除預設外距 */
+}
+
+/* ================= 4. Contact.html（聯絡表單區） ================= */
+
+/* 表單每個欄位的包裝群組 */
+.form-group {
+    margin-bottom: 20px;           /* 每個輸入欄位下方保持 20 像素距離 */
+}
+
+/* 表單欄位標題文字（<label>） */
+.form-group label {
+    display: block;                /* 轉為區塊元素，讓標題獨佔一行在輸入框上方 */
+    font-weight: bold;             /* 文字設為粗體 */
+    color: #333;                   /* 文字顏色為深灰黑 */
+    margin-bottom: 8px;            /* 標題與下方輸入框保持 8 像素距離 */
+}
+
+/* 單行輸入框（input）與多行留言框（textarea）共用樣式 */
+.form-group input,
+.form-group textarea {
+    width: 100%;                   /* 輸入框寬度撐滿左側欄位（100%） */
+    padding: 12px;                 /* 輸入框內部留白 12 像素，打字更舒適 */
+    border: 1px solid #ccc;        /* 設定 1 像素淺灰色邊框 */
+    border-radius: 8px;            /* 設定輸入框圓角為 8 像素 */
+    font-size: 1rem;               /* 設定輸入文字大小為 16px */
+    box-sizing: border-box;        /* 確保內距不會撐破 100% 寬度 */
+}
+
+/* 送出按鈕樣式 */
+.submit-btn {
+    background-color: #ad2d2d;     /* 按鈕背景設為品牌深紅色 */
+    color: #ffffff;                /* 按鈕文字設為白色 */
+    font-size: 1.1rem;             /* 按鈕文字大小 */
+    font-weight: bold;             /* 按鈕文字粗體 */
+    padding: 12px 32px;            /* 上下內距 12px、左右內距 32px */
+    border: none;                  /* 移除預設邊框 */
+    border-radius: 8px;            /* 設定按鈕圓角 8 像素 */
+    cursor: pointer;               /* 滑鼠移過去變成手指點擊圖示 */
+}
+
+/* 滑鼠移到送出按鈕上方的變色效果 */
+.submit-btn:hover {
+    background-color: #8a2222;     /* 滑鼠懸停時變成較深的暗紅色 */
+}
+
+/* ================= 5. 頁尾版權宣告區 ================= */
+
+/* 控制頁尾版權宣告區塊的外觀 */
+.footer {
+    text-align: center;            /* 讓頁尾內的版權文字水平置中對齊 */
+    background-color: chocolate;   /* 設定頁尾背景顏色為巧克力色 */
+    color: #000;                   /* 設定頁尾文字顏色為黑色（#000） */
+    padding: 20px;                 /* 四周內部留白 20 像素 */
+}
